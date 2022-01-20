@@ -1,4 +1,6 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { useState } from 'react/cjs/react.development';
 import {AiOutlineCloseCircle} from 'react-icons/ai'
 import {TiEdit} from 'react-icons/ti'
@@ -32,17 +34,18 @@ function ListToDo({list, completeTodo, removeItem, updateList, act}) {
                return list
            }
        }).map((list, index)=>(
-        <div className={list.isComplete ? 'todo-row complete' : 'todo-row'} key={index}>
+                
+          <div className={list.isComplete ? 'container todo-row complete' : 'container todo-row'} key={index}>
 
-            <div key={list.id} onClick={()=>completeTodo(list.id)}>{list.text}</div>
+                <div key={list.id} onClick={()=>completeTodo(list.id)}>{list.text}</div>
 
-        
-        <div className="icons">
-           <AiOutlineCloseCircle onClick={()=>removeItem(list.id)} className='delete-icon'/>
-           <TiEdit onClick={()=>setEdit({id:list.id, value:list.text})} className='edit-icon'/>
 
-        </div>
-       </div>
+                <div className="icons">
+                <AiOutlineCloseCircle onClick={()=>removeItem(list.id)} className='delete-icon'/>
+                <TiEdit onClick={()=>setEdit({id:list.id, value:list.text})} className='edit-icon'/>
+
+                </div>
+            </div>
        ))
        
        /* list.map((list, index)=>(

@@ -52,15 +52,11 @@ function OpToDo() {
     return (
         <>
             
-            
+            <h1 className="text-center">Lista de Tareas</h1>
             <AddToDo onSubmit={addList}/>
             <div className="container">
-                
-                       <input type="text" className="form-control act" placeholder="buscar actividad..." onChange={e=>{setAct(e.target.value)}}></input>
-                
-                
+                <input type="text" className="form-control act" placeholder="Buscar una actividad..." onChange={e=>{setAct(e.target.value)}}></input>
             </div>
-            
             <ListToDo list={list} completeTodo={completeTodo} removeItem={removeItem} updateList={updateList} act={act}/>
             
             

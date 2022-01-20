@@ -42,7 +42,7 @@ function AddToDo(props) {
                         />
                       </div>
                       <div className="col">
-                        <button type="submit" className="btn btn-primary" id="button-addon2">Actualizar</button>
+                        <button type="submit" className="btn btn-success" id="button-addon2">Actualizar</button>
                       </div>
                     </div>
                   </div>
@@ -56,6 +56,7 @@ function AddToDo(props) {
                             <input type="text"
                               value={add}
                               className="form-control"
+                              placeholder="Agregar una actividad"
                               onChange={handleChange}
                             />
                           </div>
@@ -69,8 +70,6 @@ function AddToDo(props) {
             }
 
         </form>
-
-
 
     </>
   )
