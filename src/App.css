@@ -3,11 +3,17 @@
   opacity: 0.4;
 }
 
+.act{
+   margin-left: 12px;
+   width: 380px;
+}
+
 .todo-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 4px auto;
+  /* margin: 4px auto; */
+  /*margin-top: 35px;*/
   color: #fff;
   background: linear-gradient(
     90deg,

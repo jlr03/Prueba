@@ -28,52 +28,49 @@ function AddToDo(props) {
 
   return (
     <>
-      <div className="container">
-        <h1>Prueba</h1>
-        <br />
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">Titulo</label>
-            {props.edit ? 
-                            (
-                            <>
-                            <input type="text" 
-                            value={add} 
-                            className="form-control" 
-                            id="exampleInputEmail1" 
-                            aria-describedby="emailHelp" 
-                            onChange={handleChange} 
-                            /> {/*ref={inputRef}*/}
-                            
-                            <button type="submit" className="btn btn-primary">Actualizar</button>
-                            </>) :
-                            (
-                            <>
-                            <input type="text" 
-                            value={add} 
-                            className="form-control" 
-                            id="exampleInputEmail1" 
-                            aria-describedby="emailHelp" 
-                            onChange={handleChange} 
+        <form onSubmit={handleSubmit} className="py-5 container">
+            {props.edit ?
+              (
+                <>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col">
+                        <input type="text"
+                          value={add}
+                          className="form-control"
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="col">
+                        <button type="submit" className="btn btn-primary" id="button-addon2">Actualizar</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </>) :
+              (
+                <>
+                  <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <input type="text"
+                              value={add}
+                              className="form-control"
+                              onChange={handleChange}
                             />
-                            
-                            <button type="submit" className="btn btn-primary">Agregar</button>
-                            </>)
-                          }
-            
-  
-          </div>
-          {/* <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">Descripcion</label>
-            <input type="text" className="form-control" id="exampleInputPassword1" />
-          </div> */}
-          {/* <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div> */}
-          
+                          </div>
+                          <div className="col">
+                            <button type="submit" className="btn btn-primary" id="button-addon2">Agregar</button>
+                          </div>
+
+                        </div>
+                  </div>
+                </>)
+            }
+
         </form>
-      </div>
+
+
 
     </>
   )
