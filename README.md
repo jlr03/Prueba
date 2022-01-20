@@ -8,4 +8,4 @@ También le agregué un codigo al fetch para habilitar los permisos del CORS per
 
 El aplicativo agrega, edita y elimina las actividades ingresadas.\
 Busca las actividades por descripción.\
-Para marcar una actividad como realizada se debe dar click en la descricpión.\
+Para marcar una actividad como realizada se debe dar click en la descricpión.
