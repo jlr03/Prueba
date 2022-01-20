@@ -3,11 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import AddToDo from './AddToDo';
 import ListToDo from './ListToDo';
+//import SearchList from './SearchList';
 
 
 function OpToDo() {
 
     const [list, setList] = useState([])
+    const [act, setAct]=useState("")
 
     const addList = (e) => {
         if(!e.text || /^\s*$/.test(e.text)){
@@ -49,9 +51,12 @@ function OpToDo() {
 
     return (
         <>
-                
+            
+            
             <AddToDo onSubmit={addList}/>
-            <ListToDo list={list} completeTodo={completeTodo} removeItem={removeItem} updateList={updateList}/>
+            <input type="text" placeholder="buscar actividad..." onChange={e=>{setAct(e.target.value)}}></input>
+            <ListToDo list={list} completeTodo={completeTodo} removeItem={removeItem} updateList={updateList} act={act}/>
+            
             
             {/* <div className="container">
                 <div className="card text-dark bg-light mb-3" style={{ maxWidth: '18rem' }}>

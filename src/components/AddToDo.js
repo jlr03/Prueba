@@ -5,11 +5,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function AddToDo(props) {
   const[add, setAdd]=useState(props.edit ? props.edit.value : ''); 
 
-  const inputRef = useRef(null)
+  // const inputRef = useRef(null)
 
-  useEffect(()=>{
-    inputRef.current.focus()
-  })
+  // useEffect(()=>{
+  //   inputRef.current.focus()
+  // })
 
   const handleChange=(e)=>{
     setAdd(e.target.value);
@@ -43,7 +43,7 @@ function AddToDo(props) {
                             id="exampleInputEmail1" 
                             aria-describedby="emailHelp" 
                             onChange={handleChange} 
-                            ref={inputRef}/>
+                            /> {/*ref={inputRef}*/}
                             
                             <button type="submit" className="btn btn-primary">Actualizar</button>
                             </>) :
@@ -55,7 +55,7 @@ function AddToDo(props) {
                             id="exampleInputEmail1" 
                             aria-describedby="emailHelp" 
                             onChange={handleChange} 
-                            ref={inputRef}/>
+                            />
                             
                             <button type="submit" className="btn btn-primary">Agregar</button>
                             </>)
