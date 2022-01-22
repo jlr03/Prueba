@@ -14,10 +14,10 @@ function OpToDo() {
         if (!e.text || /^\s*$/.test(e.text)) {
             return;
         }
-
+        
         const newList = [e, ...list]
         setList(newList)
-        console.log(...list)
+        
     }
 
     const updateList = (listId, nValue) => {
@@ -50,10 +50,10 @@ function OpToDo() {
 
     return (
         <>
-
             <h1 className="text-center">Lista de Tareas</h1>
             <AddToDo onSubmit={addList} />
             <div className="container">
+                <label class="form-label" style={{marginLeft:'12px'}}>Filtrar actividades por descripción</label>
                 <input type="text" className="form-control act" placeholder="Buscar una actividad..." onChange={e => { setAct(e.target.value) }}></input>
             </div>
             <ListToDo list={list} completeTodo={completeTodo} removeItem={removeItem} updateList={updateList} act={act} />

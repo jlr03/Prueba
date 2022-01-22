@@ -37,12 +37,9 @@ function ListToDo({list, completeTodo, removeItem, updateList, act}) {
           <div className={list.isComplete ? 'container todo-row complete' : 'container todo-row'} key={index}>
 
                 <div key={list.id} onClick={()=>completeTodo(list.id)}>{list.text}</div>
-
-
                 <div className="icons">
-                <AiOutlineCloseCircle onClick={()=>removeItem(list.id)} className='delete-icon'/>
-                <TiEdit onClick={()=>setEdit({id:list.id, value:list.text})} className='edit-icon'/>
-
+                    <AiOutlineCloseCircle onClick={()=>removeItem(list.id)} className='delete-icon'/>
+                    <TiEdit onClick={()=>setEdit({id:list.id, value:list.text})} className='edit-icon'/>
                 </div>
             </div>
        ))
