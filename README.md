@@ -1,6 +1,6 @@
-## Cambios en la prueba
+## API
 
-Usé otra API para el desarrollo de la prueba: https://jsonplaceholder.typicode.com/albums
+https://jsonplaceholder.typicode.com/albums
 
 ## Funciones
 
